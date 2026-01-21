@@ -1,26 +1,31 @@
 # 14-react-blog-template
 
-✨ Professional Repository Showcase Template
-
-## Live Deployments
-- Netlify: https://14-react-blog-template-mkazi.netlify.app
-- GitHub Pages: https://mk-knight23.github.io/14-react-blog-template/
-
-Status: 🟢 Live
-Last Updated: 2026-01-21T14:16:00+05:30
+✨ A sophisticated, high-performance blog platform designed for modern storytellers. Featuring dynamic content rendering, advanced typography, and a seamless React architecture.
 
 ## Features
-- 📱 Mobile Responsive
-- ⚡ Fast Performance
-- 🎨 Modern UI/UX
+- ✍️ Professional Content Management Interface
+- 🎨 Sophisticated Typography & Layout Options
+- 📱 Responsive Multi-Resolution Support
+- ⚛️ Engineered with React 18
+- ⚡ Lightning-Fast Build Pipeline via Vite 6
+
+## Tech Stack
+- **Frontend**: React 18, Tailwind CSS v4
+- **Build Tool**: Vite 6
+- **Icons**: Lucide React
+- **Animations**: Framer Motion
+- **Blog Content**: Markdown & Static JSON Support
 
 ## Quick Start
 ```bash
-git clone https://github.com/mk-knight23/14-react-blog-template.git
-cd 14-react-blog-template
 npm install
 npm run dev
 ```
 
-## License
-MIT
+## Documentation
+Additional technical details can be found in the [docs/](docs/) directory.
+
+## Live Deployment
+GitHub Pages: [Pending]
+Status: 🟡 Initializing Pipeline
+Last Updated: 2026-01-21
