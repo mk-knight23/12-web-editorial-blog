@@ -42,15 +42,16 @@ function App() {
     });
 
     return (
-        <div className="min-h-screen bg-slate-50 selection:bg-teal-100">
+        <div className="min-h-screen bg-slate-50 selection:bg-teal-100" role="application" aria-label="MK Blog - Modern tech publication">
             {/* Progress Bar */}
             <motion.div
                 className="fixed top-0 left-0 right-0 h-1.5 bg-teal-500 z-[200] origin-left"
                 style={{ scaleX }}
+                aria-hidden="true"
             />
 
             {/* Navigation */}
-            <nav className="fixed top-0 left-0 right-0 h-20 bg-white/80 backdrop-blur-xl border-b border-slate-200 z-[100]">
+            <nav className="fixed top-0 left-0 right-0 h-20 bg-white/80 backdrop-blur-xl border-b border-slate-200 z-[100]" role="navigation" aria-label="Main navigation">
                 <div className="max-w-7xl mx-auto px-6 h-full flex justify-between items-center">
                     <div className="flex items-center gap-2">
                         <div className="w-10 h-10 bg-black rotate-45 flex items-center justify-center overflow-hidden">
@@ -61,32 +62,32 @@ function App() {
 
                     <div className="hidden md:flex items-center gap-10">
                         {['Articles', 'Newsletter', 'About', 'Archive'].map(link => (
-                            <a key={link} href="#" className="text-sm font-bold text-slate-500 hover:text-black transition-colors uppercase tracking-widest">{link}</a>
+                            <a key={link} href="#" className="text-sm font-bold text-slate-500 hover:text-black transition-colors uppercase tracking-widest" aria-label={`Navigate to ${link}`}>{link}</a>
                         ))}
-                        <button className="p-2 hover:bg-slate-100 rounded-full transition-colors">
+                        <button className="p-2 hover:bg-slate-100 rounded-full transition-colors" aria-label="Search articles">
                             <Search className="w-5 h-5" />
                         </button>
-                        <button className="px-6 py-2 bg-black text-white text-xs font-black rounded-full uppercase tracking-widest hover:bg-slate-800 transition-all active:scale-95">
+                        <button className="px-6 py-2 bg-black text-white text-xs font-black rounded-full uppercase tracking-widest hover:bg-slate-800 transition-all active:scale-95" aria-label="Subscribe to newsletter">
                             Subscribe
                         </button>
                     </div>
 
-                    <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                    <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} aria-expanded={isMenuOpen}>
                         {isMenuOpen ? <X /> : <Menu />}
                     </button>
                 </div>
             </nav>
 
-            <main className="pt-32 pb-24">
+            <main className="pt-32 pb-24" role="main">
                 {/* Hero Section */}
-                <section className="max-w-7xl mx-auto px-6 mb-24">
+                <section className="max-w-7xl mx-auto px-6 mb-24" aria-labelledby="hero-heading">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         className="text-center"
                     >
                         <span className="text-xs font-black text-teal-600 uppercase tracking-[0.3em] mb-6 block">Thought Leadership in Tech</span>
-                        <h1 className="text-7xl md:text-[9rem] font-black tracking-tighter leading-[0.85] mb-12">
+                        <h1 id="hero-heading" className="text-7xl md:text-[9rem] font-black tracking-tighter leading-[0.85] mb-12">
                             THE <br /> <span className="text-slate-200 block md:inline">MODERN</span> <br /> DEVELOPER.
                         </h1>
                         <p className="typography-p max-w-2xl mx-auto">
@@ -96,10 +97,10 @@ function App() {
                 </section>
 
                 {/* Featured Posts */}
-                <section className="max-w-7xl mx-auto px-6">
+                <section className="max-w-7xl mx-auto px-6" aria-labelledby="articles-heading">
                     <div className="flex justify-between items-end mb-12">
-                        <h2 className="text-4xl font-black tracking-tight uppercase">Latest <span className="text-slate-300">Articles</span></h2>
-                        <button className="flex items-center gap-2 text-sm font-black uppercase tracking-widest hover:text-teal-600 transition-colors">
+                        <h2 id="articles-heading" className="text-4xl font-black tracking-tight uppercase">Latest <span className="text-slate-300">Articles</span></h2>
+                        <button className="flex items-center gap-2 text-sm font-black uppercase tracking-widest hover:text-teal-600 transition-colors" aria-label="View all articles">
                             View All <ArrowRight className="w-4 h-4" />
                         </button>
                     </div>
@@ -148,13 +149,13 @@ function App() {
                 </section>
 
                 {/* Newsletter Section */}
-                <section className="max-w-7xl mx-auto px-6 mt-32">
+                <section className="max-w-7xl mx-auto px-6 mt-32" aria-labelledby="newsletter-heading">
                     <div className="bg-black rounded-[3rem] p-12 md:p-24 text-center text-white relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-96 h-96 bg-teal-500/20 rounded-full blur-[100px] -z-0" />
 
                         <div className="relative z-10 max-w-2xl mx-auto">
-                            <Mail className="w-12 h-12 text-teal-400 mx-auto mb-8" />
-                            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-none">JOIN THE <br /> INNER CIRCLE.</h2>
+                            <Mail className="w-12 h-12 text-teal-400 mx-auto mb-8" aria-hidden="true" />
+                            <h2 id="newsletter-heading" className="text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-none">JOIN THE <br /> INNER CIRCLE.</h2>
                             <p className="text-lg md:text-xl text-slate-400 font-medium mb-12">
                                 Join 10,000+ developers receiving our weekly deep-dive into the tech stack of the future. No spam, just pure signal.
                             </p>
@@ -164,8 +165,10 @@ function App() {
                                     type="email"
                                     placeholder="EMAIL@EXAMPLE.COM"
                                     className="flex-1 px-8 py-5 bg-white/10 border border-white/20 rounded-2xl text-white font-bold placeholder:text-slate-600 focus:outline-none focus:border-teal-400 transition-colors uppercase text-xs tracking-widest"
+                                    aria-label="Email address for newsletter"
+                                    required
                                 />
-                                <button className="px-10 py-5 bg-teal-500 hover:bg-teal-400 text-black font-black rounded-2xl transition-all active:scale-95 uppercase text-xs tracking-widest">
+                                <button className="px-10 py-5 bg-teal-500 hover:bg-teal-400 text-black font-black rounded-2xl transition-all active:scale-95 uppercase text-xs tracking-widest" aria-label="Subscribe to newsletter">
                                     JOIN NOW
                                 </button>
                             </div>
@@ -175,7 +178,7 @@ function App() {
             </main>
 
             {/* Footer */}
-            <footer className="py-20 bg-white border-t border-slate-200">
+            <footer className="py-20 bg-white border-t border-slate-200" role="contentinfo">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
                         <div className="max-w-sm">
@@ -214,10 +217,10 @@ function FooterSection({ title, links }: { title: string, links: string[] }) {
     return (
         <div className="space-y-6">
             <h4 className="text-xs font-black text-slate-900 uppercase tracking-[0.2em]">{title}</h4>
-            <ul className="space-y-4">
+            <ul className="space-y-4" role="list">
                 {links.map(l => (
                     <li key={l}>
-                        <a href="#" className="text-sm font-bold text-slate-500 hover:text-black transition-colors uppercase tracking-widest">{l}</a>
+                        <a href="#" className="text-sm font-bold text-slate-500 hover:text-black transition-colors uppercase tracking-widest" aria-label={`Navigate to ${l}`}>{l}</a>
                     </li>
                 ))}
             </ul>
