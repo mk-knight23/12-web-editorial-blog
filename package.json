@@ -1,5 +1,5 @@
 {
-  "name": "14-react-blog-template",
+  "name": "12-web-editorial-blog",
   "private": false,
   "version": "2.1.0",
   "description": "Premium React editorial blog template modernized with React 19, Vite 6, and Tailwind CSS v4.",
@@ -25,9 +25,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mk-knight23/14-react-blog-template.git"
+    "url": "git+https://github.com/mk-knight23/12-web-editorial-blog.git"
   },
-  "homepage": "https://mk-knight23.github.io/14-react-blog-template/",
+  "homepage": "https://mk-knight23.github.io/12-web-editorial-blog/",
   "dependencies": {
     "clsx": "^2.1.1",
     "framer-motion": "^12.29.2",

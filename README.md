@@ -1,4 +1,4 @@
-# 14-react-blog-template
+# 12 Web Editorial Blog
 
 ✨ A sophisticated, high-performance blog platform designed for modern storytellers. Featuring dynamic content rendering, advanced typography, and a seamless React architecture.
 
@@ -27,7 +27,7 @@ npm run dev
 - [Deployment Guide](docs/DEPLOY.md)
 
 ## Live Deployment
-- **GitHub Pages**: [https://mk-knight23.github.io/14-react-blog-template/](https://mk-knight23.github.io/14-react-blog-template/)
+- **GitHub Pages**: [https://mk-knight23.github.io/12-web-editorial-blog/](https://mk-knight23.github.io/12-web-editorial-blog/)
 - **Status**: 🟢 Live
 - **Modernized**: 2026-01-23
 
@@ -36,8 +36,8 @@ npm run dev
 
 ## 🌐 Live Deployments
 
-- Vercel: https://14-react-blog-template.vercel.app
-- GitHub Pages: https://mk-knight23.github.io/14-react-blog-template/
+- Vercel: https://12-web-editorial-blog.vercel.app
+- GitHub Pages: https://mk-knight23.github.io/12-web-editorial-blog/
 
 Status: 🟢 Deployments Live  
 Last Updated: 2026-01-23
