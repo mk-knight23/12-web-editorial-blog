@@ -8,5 +8,5 @@ export default defineConfig({
         react(),
         tailwindcss(),
     ],
-    base: process.env.VERCEL || process.env.NETLIFY ? './' : '/14-react-blog-template/',
+    base: process.env.VERCEL || process.env.NETLIFY ? './' : '/12-web-editorial-blog/',
 })
