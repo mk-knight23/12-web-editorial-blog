@@ -1,22 +1,26 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-    --color-editorial-teal: #0d9488;
+  --color-editorial-teal: #0d9488;
 }
 
 @layer base {
-    body {
-        @apply bg-slate-50 text-slate-900 antialiased selection:bg-teal-100;
-        font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    }
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased selection:bg-teal-100;
+    font-family:
+      'Inter',
+      system-ui,
+      -apple-system,
+      sans-serif;
+  }
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 @layer components {
-    .typography-p {
-        @apply text-xl md:text-2xl text-slate-500 font-medium leading-relaxed;
-    }
+  .typography-p {
+    @apply text-xl md:text-2xl text-slate-500 font-medium leading-relaxed;
+  }
 }
